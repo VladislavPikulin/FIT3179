@@ -13,7 +13,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week%209%20HW/torism.csv"
+          "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week%209%20HW/data/tourism.csv"
         },
         "key": "Country Name",
         "fields": ["2018"]
