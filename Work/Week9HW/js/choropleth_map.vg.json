@@ -5,7 +5,7 @@
   "height": 400,
   "projection": {"type": "equalEarth"},
   "data": {
-    "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week%209%20HW/js/week9homework.topojson",
+    "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week9HW/js/week9homework.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
   "transform": [
@@ -13,7 +13,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week%209%20HW/data/tourism.csv"
+          "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week9HW/data/tourism.csv"
         },
         "key": "Country Name",
         "fields": ["2018"]
