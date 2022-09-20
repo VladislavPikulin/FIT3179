@@ -22,7 +22,8 @@
     }
   ],
   "transform": [
-    {
+    {  
+
       "lookup": "properties.SU_A3",
       "from": {
         "data": {
@@ -33,7 +34,8 @@
       }
     },
     {"calculate": "datum['2018']", "as": "Tourist Arrivals"},
-    {"filter": "datum['2018'] > Select_Year"}
+    {"filter": "datum['2018'] > Select_Year"},
+    {"filter": "datum['Country Name'] != 'Algeria'"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
