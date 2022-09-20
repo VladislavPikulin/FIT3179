@@ -2,4 +2,4 @@
 Repository for FIT3179
 
 
-URL to the github pages: <TO BE ADDED>
+URL to the github pages: https://vladislavpikulin.github.io/FIT3179/
