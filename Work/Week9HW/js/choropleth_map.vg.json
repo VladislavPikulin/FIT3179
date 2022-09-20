@@ -19,20 +19,21 @@
         "step": 1000000,
         "name": "Minimum Tourist Arrivals: "
       }
-    }],
+    }
+  ],
   "transform": [
     {
-      "lookup": "properties.NAME",
+      "lookup": "properties.SU_A3",
       "from": {
         "data": {
           "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week9HW/data/tourism.csv"
         },
-        "key": "Country Name",
+        "key": "Country Code",
         "fields": ["2018"]
       }
     },
     {"calculate": "datum['2018']", "as": "Tourist Arrivals"},
-     {"filter": "datum['2018'] > Select_Year"}
+    {"filter": "datum['2018'] > Select_Year"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
