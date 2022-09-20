@@ -5,7 +5,7 @@
   "height": 400,
   "projection": {"type": "equalEarth"},
   "data": {
-    "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week%209%20HW/week9homework.topojson",
+    "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week%209%20HW/js/week9homework.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
   "transform": [
