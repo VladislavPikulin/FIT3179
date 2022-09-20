@@ -1,11 +1,11 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "COVID-19 Active Cases (10 Oct 2020)",
+  "title": "Number of Tourist Arrivals in 2018",
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth"},
   "data": {
-    "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+    "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week%209%20HW/week9homework.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
   "transform": [
@@ -13,24 +13,24 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/VegaLite/3_choropleth_map/data/covid_10_10_2020.csv"
+          "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week%209%20HW/torism.csv"
         },
-        "key": "Country",
-        "fields": ["Active"]
+        "key": "Country Name",
+        "fields": ["2018"]
       }
     },
-    {"calculate": "datum.Active + 0.1", "as": "Active Cases"}
+    {"calculate": "datum['2018']", "as": "Tourist Arrivals"}
   ],
   "mark": {"type": "geoshape"},
   "encoding": {
     "color": {
-      "field": "Active Cases",
+      "field": "2018",
       "type": "quantitative",
       "scale": {"type": "log"}
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-      {"field": "Active", "type": "quantitative"}
+      {"field": "2018", "type": "quantitative", "title":"Number of Tourist Arrivals"}
     ]
   }
 }
