@@ -48,7 +48,7 @@
       },
       {"calculate": "datum['2018']", "as": "Tourist Arrivals"},
       // {"filter": "datum['2018'] > Select_Tourist_Count"},
-      {"filter": "isValid(datum['2018'])"}
+      {"filter": "datum['2018'] > 0"}
     ],
     
     "mark": {"type": "geoshape"},
