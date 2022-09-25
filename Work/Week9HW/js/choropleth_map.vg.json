@@ -22,16 +22,15 @@
     }
   ],
 
-    "layer":[{
+    "layer":[
+        {
           "data": {
             "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week9HW/js/oceans.topo.json",
             "format": {"type": "topojson", "feature": "oceans"}
           },
           "mark":{"type":"geoshape","fill":"skyblue"}     
-        }
-    ],
-    
-  "layer":[{
+        },
+        {
     "transform": [
         {
             "calculate": "'Data is not available in ' + datum.properties.NAME",
@@ -40,8 +39,8 @@
     ],
     "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"},
     "encoding": {"tooltip": {"field": "note"}}
-  }],
-  "layer":[{
+        },
+    {
     "transform": [
       {  
 
