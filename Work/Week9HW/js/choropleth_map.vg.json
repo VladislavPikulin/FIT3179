@@ -8,19 +8,7 @@
     "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week9HW/js/output.topo.json",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
-  // "params": [
-  //   {
-  //     "name": "Select_Tourist_Count",
-  //     "value": 0,
-  //     "bind": {
-  //       "input": "range",
-  //       "min": 0,
-  //       "max": 10000000,
-  //       "step": 1000000,
-  //       "name": "Minimum Tourist Arrivals: "
-  //     }
-  //   }
-  // ],
+
 
     "layer":[
         {
@@ -47,7 +35,6 @@
         }
       },
       {"calculate": "datum['2018']", "as": "Tourist Arrivals"},
-      // {"filter": "datum['2018'] > Select_Tourist_Count"},
       {"filter": "datum['2018'] > 0"}
     ],
     
