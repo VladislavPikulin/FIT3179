@@ -46,7 +46,7 @@
         "scale": {"type": "log", "scheme": "lighttealblue"}
       },
       "tooltip": [
-        {"field": "properties.NAME", "type": "nominal", "title": "Country"},
+        {"field": "properties.NAME", "type": "nominal", "title": "Country Name"},
         {
           "field": "Average",
           "type": "quantitative",
