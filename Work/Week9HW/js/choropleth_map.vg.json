@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Number of Tourist Arrivals in Europe in 2018",
+  "title": "Average Tourist Arrivals in Europe from the year 2000 to 2018",
   "width": 800,
   "height": 400,
   "projection": {"type": "equalEarth"},
@@ -31,11 +31,11 @@
             "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week9HW/data/tourism.csv"
           },
           "key": "Country Code",
-          "fields": ["2018"]
+          "fields": ["Average"]
         }
       },
-      {"calculate": "datum['2018']", "as": "Tourist Arrivals"},
-      {"filter": "datum['2018'] > 0"}
+      {"calculate": "datum['Average']", "as": "Tourist Arrivals"},
+      {"filter": "datum['Average'] > 0"}
     ],
     
     "mark": {"type": "geoshape"},
@@ -48,9 +48,9 @@
       "tooltip": [
         {"field": "properties.NAME", "type": "nominal", "title": "Country"},
         {
-          "field": "2018",
+          "field": "Average",
           "type": "quantitative",
-          "title": "Number of Tourist Arrivals"
+          "title": "Average Tourist Arrivals"
         }
       ]
     }
