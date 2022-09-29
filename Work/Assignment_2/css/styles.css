@@ -1,51 +1,55 @@
 #choropleth_map {
-	top:100px;
-	bottom: 100px; 
+
 	left: 100px;
 	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+	height: 500px;
+	width: 800px;
 }
 
 #chart1 {
-	top:100px;
-	bottom: 100px; 
+
 	left: 100px;
 	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+	height: 500px;
+	width: 800px;
 }
 
 #chart2 {
-	top:100px;
-	bottom: 100px; 
+
 	left: 100px;
 	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+	height: 500px;
+	width: 800px;
 }
 
 #chart3 {
-	top:100px;
-	bottom: 100px; 
+
 	left: 100px;
 	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+	height: 500px;
+	width: 800px;
 }
 
 #chart4 {
+
+	left: 100px;
+	right: 100px;
+	height: 500px;
+	width: 800px;
+}
+
+body{
 	top:100px;
 	bottom: 100px; 
 	left: 100px;
 	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
+	height: 3000px;
 }
 
-body{
-	height: 1000px;
-	column-count: 3;
+#grid{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	column-count: 2;
 	column-gap: 40px;
-
+	column-width: 400px;
 }
