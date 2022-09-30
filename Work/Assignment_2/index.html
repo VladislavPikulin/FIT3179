@@ -13,7 +13,7 @@
 </head>
 <body>
 
- <h1>Tourism in Europe in 2019</h1>
+ <h1>Tourism in Europe in Year 2000 to 2019</h1>
  <br>
 
   <div id="grid">
@@ -53,6 +53,19 @@
     }).catch(console.error);
 
     vegaEmbed('#chart1', "js/chart1.vg.json").then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+
+    vegaEmbed('#chart2', "js/chart2.vg.json").then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#chart3', "js/chart3.vg.json").then(function(result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#chart4', "js/chart4.vg.json").then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
 

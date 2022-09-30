@@ -1,0 +1,75 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "A basic radial plot that encodes two values as the angle and radius of an arc.",
+  
+    "data": [
+      {
+        "name": "table",
+        "values": [ {"category":"Jan", "value":36995000},
+                    {"category":"Feb", "value":37692000}, 
+                    {"category":"Mar", "value":45518000}, 
+                    {"category":"Apr", "value":56725000}, 
+                    {"category":"May", "value":64043000}, 
+                    {"category":"Jun", "value":77462000},
+                    {"category":"Jul", "value":97635000},
+                    {"category":"Aug", "value":98575000},
+                    {"category":"Sep", "value":77905000},
+                    {"category":"Oct", "value":59350000},
+                    {"category":"Nov", "value":42445000},
+                    {"category":"Dec", "value":43222000}],
+
+        "transform": [{"type": "pie", "field": "value"}]
+      }
+    ],
+  
+    "scales": [
+      {
+        "name": "r",
+        "type": "sqrt",
+        "domain": {"data": "table", "field": "value"},
+        "zero": true,
+        "range": [20, 100]
+      }
+    ],
+  
+    "marks": [
+      {
+        "type": "arc",
+        "from": {"data": "table"},
+        "encode": {
+          "enter": {
+            "x": {"field": {"group": "width"}, "mult": 0.5},
+            "y": {"field": {"group": "height"}, "mult": 0.5},
+            "startAngle": {"field": "startAngle"},
+            "endAngle": {"field": "endAngle"},
+            "innerRadius": {"value": 10},
+            "outerRadius": {"scale": "r", "field": "value"},
+            "stroke": {"value": "#fff"}
+          },
+          "update": {
+            "fill": {"value": "#ccc"}
+          },
+          "hover": {
+            "fill": {"value": "pink"}
+          }
+        }
+      },
+  
+      {
+        "type": "text",
+        "from": {"data": "table"},
+        "encode": {
+          "enter": {
+            "x": {"field": {"group": "width"}, "mult": 0.5},
+            "y": {"field": {"group": "height"}, "mult": 0.5},
+            "radius": {"scale": "r", "field": "value", "offset": 8},
+            "theta": {"signal": "(datum.startAngle + datum.endAngle)/2"},
+            "fill": {"value": "#000"},
+            "align": {"value": "center"},
+            "baseline": {"value": "middle"},
+            "text": {"field": "category"}
+          }
+        }
+      }
+    ]
+  }
