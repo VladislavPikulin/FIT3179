@@ -1,0 +1,9 @@
+{
+    "data": {"url": "data/modified/europe_tourists_total.csv"},
+    "transform": [{"filter": "datum.symbol==='GOOG'"}],
+    "mark": "line",
+    "encoding": {
+      "x": {"field": "Year", "type": "temporal"},
+      "y": {"field": "Total Tourists", "type": "quantitative"}
+    }
+  }
