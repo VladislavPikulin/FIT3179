@@ -96,7 +96,6 @@
   "marks": [
     {
       "type": "arc",
-      "tooltip": true,
       "from": {"data": "table"},
       "encode": {
         "enter": {
@@ -104,9 +103,10 @@
           "y": {"field": {"group": "height"}, "mult": 0.5},
           "startAngle": {"field": "startAngle"},
           "endAngle": {"field": "endAngle"},
-          "innerRadius": {"value": 10},
+          "innerRadius": {"value": 30},
           "outerRadius": {"scale": "r", "field": "value"},
-          "stroke": {"value": "#fff"}
+          "stroke": {"value": "#fff"},
+          "tooltip": {"field": "value", "type": "quantitative","title":"Number of tourists"}
         },
         "update": {"fill": {"value": "#ccc"}},
         "hover": {"fill": {"value": "pink"}}
@@ -119,7 +119,7 @@
         "enter": {
           "x": {"field": {"group": "width"}, "mult": 0.5},
           "y": {"field": {"group": "height"}, "mult": 0.5},
-          "radius": {"scale": "r", "field": "value", "offset": 8},
+          "radius": {"scale": "r", "field": "value", "offset": 13},
           "theta": {"signal": "(datum.startAngle + datum.endAngle)/2"},
           "fill": {"value": "#000"},
           "align": {"value": "center"},
