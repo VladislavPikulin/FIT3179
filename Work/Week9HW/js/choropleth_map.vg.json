@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Average Tourist Arrivals in Europe from the year 2000 to 2018",
-  "width": 800,
+  "width": 700,
   "height": 400,
   "projection": {"type": "equalEarth"},
   "data": {

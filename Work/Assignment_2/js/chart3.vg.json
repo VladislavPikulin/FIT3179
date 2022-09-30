@@ -1,9 +1,43 @@
 {
-    "data": {"url": "data/modified/europe_tourists_total.csv"},
-    "transform": [{"filter": "datum.symbol==='GOOG'"}],
-    "mark": "line",
-    "encoding": {
-      "x": {"field": "Year", "type": "temporal"},
-      "y": {"field": "Total Tourists", "type": "quantitative"}
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 700,
+  "height": 400,
+  "title": "Where do Tourists go to in Europe as Average Tourist Arrivals Between the Years 2000 and 2019",
+  "description": "A donut chart representing the number of tourists that visit each country on average.",
+  "data": 
+      {
+        "name": "table",
+        "values": [ {"country":"France","value":199231062.5},
+                    {"country":"Spain","value":98706350},
+                    {"country":"Italy","value":73569280.1},
+                    {"country":"Poland","value":68472600},
+                    {"country":"Croatia","value":49382150},
+                    {"country":"Hungary","value":42129100},
+                    {"country":"United Kingdom","value":32233250},
+                    {"country":"Denmark","value":27216176.5},
+                    {"country":"Germany","value":27428400},
+                    {"country":"Czechia","value":26812823.5},
+                    {"country":"Russia","value":24676600},
+                    {"country":"Greece","value":21517500},
+                    {"country":"Ukraine","value":18684100},
+                    {"country":"Slovakia","value":14526000},
+
+                    {"country":"Other","value":120995576.5                  }
+                    ]
+      },
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 50, "outerRadius": 160},
+      "encoding": {"tooltip":[{"field": "country", "type": "nominal", "title": "Country Name"} ,{"field": "value", "type": "quantitative", "title": "Avg. Number of Tourists"}]   }
+    },
+    {
+      "mark": {"type": "text", "radius": 180},
+      "encoding": {"text": {"field": "country", "type": "nominal"}}
     }
-  }
+  ],
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative", "stack": true},
+    "color": {"field": "country", "type": "nominal", "legend": null}
+  },
+  "view": {"stroke": null}
+}

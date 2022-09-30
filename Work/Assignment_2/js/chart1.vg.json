@@ -1,41 +1,21 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Where do Tourists go to in Europe as Average tourist Arrivals Between the Years 2000 and 2019",
-  "description": "A donut chart representing the number of tourists that visit each country on average.",
-  "data": 
-      {
-        "name": "table",
-        "values": [ {"country":"France","value":197988000},
-                    {"country":"Spain","value":98706350},
-                    {"country":"Italy","value":73569280.08},
-                    {"country":"Poland","value":68472600},
-                    {"country":"Croatia","value":49382150},
-                    {"country":"Hungary","value":42129100},
-                    {"country":"United Kingdom","value":32233250},
-                    {"country":"Denmark","value":27216176.47},
-                    {"country":"Germany","value":27428400},
-                    {"country":"Czechia","value":26812823.53},
-                    {"country":"Russia","value":24676600                  },
-                    {"country":"Greece","value":21517500                  },
-                    {"country":"Ukraine","value":18684100                  },
-                    {"country":"Slovakia","value":14526000                  },
-
-                    {"country":"Other","value":120995576.5                  }
-                    ]
-      },
-  "layer": [
-    {
-      "mark": {"type": "arc", "innerRadius": 50, "outerRadius": 160},
-      "encoding": {"tooltip":[{"field": "country", "type": "nominal", "title": "Country Name"} ,{"field": "value", "type": "quantitative", "title": "Avg. Number of Tourists"}]   }
-    },
-    {
-      "mark": {"type": "text", "radius": 180},
-      "encoding": {"text": {"field": "country", "type": "nominal"}}
-    }
-  ],
-  "encoding": {
-    "theta": {"field": "value", "type": "quantitative", "stack": true},
-    "color": {"field": "country", "type": "nominal", "legend": null}
+  "title": "Total Tourist Arrivals in Europe Between the Years 2000 and 2019",
+  "width": 700,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Assignment_2/data/modified/tourism_europe_total.csv"
   },
-  "view": {"stroke": null}
+  "mark": {"type": "line", "strokeWidth": 3.5},
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal"},
+    "y": {"field": "Tourists", "type": "quantitative"},
+    "tooltip": [
+      {"field": "Year", "type": "temporal", "title": "Year"},
+      {
+        "field": "Tourists",
+        "type": "quantitative",
+        "title": "Total Number of Tourists"
+      }
+    ]
+  }
 }

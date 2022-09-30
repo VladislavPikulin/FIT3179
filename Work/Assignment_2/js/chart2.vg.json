@@ -1,10 +1,132 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A scatterplot showing horsepower and miles per gallons for various cars.",
-    "data": {"url": "data/cars.json"},
-    "mark": "point",
-    "encoding": {
-      "x": {"field": "Horsepower", "type": "quantitative"},
-      "y": {"field": "Miles_per_Gallon", "type": "quantitative"}
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 700,
+  "height": 400,
+  "description": "A basic radial plot that encodes two values as the angle and radius of an arc.",
+  "title": "Total Monthly Tourist Arrivals to Europe",
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {
+          "category": "Jan",
+          "value": 36995000,
+          "startAngle": 0,
+          "endAngle": 0.3151529833074267
+        },
+        {
+          "category": "Feb",
+          "value": 37692000,
+          "startAngle": 0.3151529833074267,
+          "endAngle": 0.6362435697873166
+        },
+        {
+          "category": "Mar",
+          "value": 45518000,
+          "startAngle": 0.6362435697873166,
+          "endAngle": 1.0240022802667719
+        },
+        {
+          "category": "Apr",
+          "value": 56725000,
+          "startAngle": 1.0240022802667719,
+          "endAngle": 1.5072311754719017
+        },
+        {
+          "category": "May",
+          "value": 64043000,
+          "startAngle": 1.5072311754719017,
+          "endAngle": 2.052800644588202
+        },
+        {
+          "category": "Jun",
+          "value": 77462000,
+          "startAngle": 2.052800644588202,
+          "endAngle": 2.7126838826733453
+        },
+        {
+          "category": "Jul",
+          "value": 97635000,
+          "startAngle": 2.7126838826733453,
+          "endAngle": 3.544416860784458
+        },
+        {
+          "category": "Aug",
+          "value": 98575000,
+          "startAngle": 3.544416860784458,
+          "endAngle": 4.384157510318978
+        },
+        {
+          "category": "Sep",
+          "value": 77905000,
+          "startAngle": 4.384157510318978,
+          "endAngle": 5.047814576532388
+        },
+        {
+          "category": "Oct",
+          "value": 59350000,
+          "startAngle": 5.047814576532388,
+          "endAngle": 5.553405320127354
+        },
+        {
+          "category": "Nov",
+          "value": 42445000,
+          "startAngle": 5.553405320127354,
+          "endAngle": 5.914985760091774
+        },
+        {
+          "category": "Dec",
+          "value": 43222000,
+          "startAngle": 5.914985760091774,
+          "endAngle": 6.283185307179586
+        }
+      ],
+      "transform": [{"type": "pie", "field": "value"}]
     }
-  }
+  ],
+  "scales": [
+    {
+      "name": "r",
+      "type": "sqrt",
+      "domain": {"data": "table", "field": "value"},
+      "zero": true,
+      "range": [20, 160]
+    }
+  ],
+  "marks": [
+    {
+      "type": "arc",
+      "tooltip": true,
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "x": {"field": {"group": "width"}, "mult": 0.5},
+          "y": {"field": {"group": "height"}, "mult": 0.5},
+          "startAngle": {"field": "startAngle"},
+          "endAngle": {"field": "endAngle"},
+          "innerRadius": {"value": 10},
+          "outerRadius": {"scale": "r", "field": "value"},
+          "stroke": {"value": "#fff"}
+        },
+        "update": {"fill": {"value": "#ccc"}},
+        "hover": {"fill": {"value": "pink"}}
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "table"},
+      "encode": {
+        "enter": {
+          "x": {"field": {"group": "width"}, "mult": 0.5},
+          "y": {"field": {"group": "height"}, "mult": 0.5},
+          "radius": {"scale": "r", "field": "value", "offset": 8},
+          "theta": {"signal": "(datum.startAngle + datum.endAngle)/2"},
+          "fill": {"value": "#000"},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "text": {"field": "category"}
+        }
+      }
+    }
+  ]
+}
