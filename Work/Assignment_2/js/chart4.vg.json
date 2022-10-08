@@ -4,7 +4,7 @@
   "height": 600,
   "title": "Tourism in Europe against GDP and Cost of Living in 2019",
   "data": {
-    "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Assignment_2/data/modified/cost_of_living_2019.csv"
+    "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week10HW/data/modified/cost_of_living_2019.csv"
   },
   "params": [
     {
@@ -56,9 +56,35 @@
         "opacity": {"value": 0.6},
         "tooltip": [
           {"field": "Country", "type": "nominal"},
+          {"field": "Number of Tourists", "type": "quantitative", "format": ","},
           {"field": "GDP per capita", "type": "quantitative", "format": ","},
-          {"field": "Cost of Living Index", "type": "quantitative", "format": ","}
+          {
+            "field": "Cost of Living Index",
+            "type": "quantitative",
+            "format": ","
+          }
         ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Country", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Country'] == 'France' || datum['Country'] == 'Ukraine' || datum['Country'] == 'Germany' || datum['Country'] == 'Portugal'|| datum['Country'] == 'Switzerland'|| datum['Country'] == 'Luxembourg'|| datum['Country'] == 'Norway'|| datum['Country'] == 'Ireland'",
+            "value": 1
+          },
+          "value": 0
+        }
       }
     }
   ]

@@ -56,9 +56,35 @@
         "opacity": {"value": 0.6},
         "tooltip": [
           {"field": "Country", "type": "nominal"},
+          {"field": "Number of Tourists", "type": "quantitative", "format": ","},
           {"field": "GDP per capita", "type": "quantitative", "format": ","},
-          {"field": "Cost of Living Index", "type": "quantitative", "format": ","}
+          {
+            "field": "Cost of Living Index",
+            "type": "quantitative",
+            "format": ","
+          }
         ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Country", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Country'] == 'France' || datum['Country'] == 'Ukraine' || datum['Country'] == 'Germany' || datum['Country'] == 'Portugal'|| datum['Country'] == 'Switzerland'|| datum['Country'] == 'Luxembourg'|| datum['Country'] == 'Norway'|| datum['Country'] == 'Ireland'",
+            "value": 1
+          },
+          "value": 0
+        }
       }
     }
   ]
