@@ -3,7 +3,7 @@
   "width": 700,
   "height": 400,
   "description": "A basic radial plot that encodes two values as the angle and radius of an arc.",
-  "title": "TOurist Arrivals to Europe By Month",
+  "title": "Tourist Arrivals to Europe By Month",
   "data": [
     {
       "name": "table",
