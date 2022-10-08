@@ -1,0 +1,21 @@
+{
+  "title": "Tourist Arrivals in Europe Between the Years 2000 and 2019",
+  "width": 700,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Assignment_2/data/modified/tourism_europe_total.csv"
+  },
+  "mark": {"type": "line", "strokeWidth": 3.5},
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal"},
+    "y": {"field": "Tourists", "type": "quantitative"},
+    "tooltip": [
+      {"field": "Year", "type": "temporal", "title": "Year"},
+      {
+        "field": "Tourists",
+        "type": "quantitative",
+        "title": "Total Number of Tourists"
+      }
+    ]
+  }
+}
