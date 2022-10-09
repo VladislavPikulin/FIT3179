@@ -13,14 +13,24 @@
 </head>
 <body>
   
-<div id="choropleth_map"></div>
+<div id="viz1"></div>
+
+
+<div style="margin-top: 100px;" id="viz2"></div>
 
 <script type="text/javascript">
 
   var spec2 = "js/chart1.vg.json";
-  vegaEmbed('#choropleth_map', spec2).then(function(result) {
+  vegaEmbed('#viz1', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+
+  var spec3 = "js/chart2.vg.json";
+  vegaEmbed('#viz2', spec3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+
 </script>
 
 </body>
