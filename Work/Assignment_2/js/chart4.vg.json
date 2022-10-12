@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 385,
-  "height": 250,
+  "width": 700,
+  "height": 400,
   "background": "#EEEADD",
   "config": {
     "style": {
@@ -11,7 +11,7 @@
     },
     "axis": {
       "grid": true,
-      "gridColor": "#f2f2f2"
+      "gridColor": "#c4a6a6"
     }
   },
   "data": {
