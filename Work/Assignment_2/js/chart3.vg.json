@@ -27,11 +27,11 @@
       },
   "layer": [
     {
-      "mark": {"type": "arc", "innerRadius": 50, "outerRadius": 160},
+      "mark": {"type": "arc", "innerRadius": 80, "outerRadius": 240},
       "encoding": {"tooltip":[{"field": "country", "type": "nominal", "title": "Country Name"} ,{"field": "value", "type": "quantitative", "title": "Avg. Number of Tourists"}]   }
     },
     {
-      "mark": {"type": "text", "radius": 180},
+      "mark": {"type": "text", "radius": 260},
       "encoding": {"text": {"field": "country", "type": "nominal"}}
     }
   ],

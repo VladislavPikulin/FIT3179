@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 700,
+  "width": 500,
   "height": 400,
   "description": "A basic radial plot that encodes two values as the angle and radius of an arc.",
   "title": "Tourist Arrivals to Europe By Month",
@@ -90,12 +90,13 @@
       "type": "sqrt",
       "domain": {"data": "table", "field": "value"},
       "zero": true,
-      "range": [20, 160]
+      "range": [40, 240]
     }
   ],
   "marks": [
     {
       "type": "arc",
+      "color":"#4682b4",
       "from": {"data": "table"},
       "encode": {
         "enter": {
@@ -103,7 +104,7 @@
           "y": {"field": {"group": "height"}, "mult": 0.5},
           "startAngle": {"field": "startAngle"},
           "endAngle": {"field": "endAngle"},
-          "innerRadius": {"value": 30},
+          "innerRadius": {"value": 50},
           "outerRadius": {"scale": "r", "field": "value"},
           "stroke": {"value": "#fff"},
           "tooltip": {"field": "value", "type": "quantitative","title":"Number of tourists"}
