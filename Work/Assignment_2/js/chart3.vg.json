@@ -3,7 +3,6 @@
   "width": 800,
   "height": 600,
   "background": "#EEEADD",
-  "title": "Average tourist Arrivals in Europe By Country Between the Years 2000 and 2019",
   "description": "A donut chart representing the number of tourists that visit each country on average.",
   "data": 
       {

@@ -14,7 +14,6 @@
       "gridColor": "#f2f2f2"
     }
   },
-  "title": "Tourism in Europe against GDP and Cost of Living in 2019",
   "data": {
     "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Week10HW/data/modified/cost_of_living_2019.csv"
   },
@@ -53,8 +52,7 @@
   },
   "layer": [
     {
-      "mark": "circle",
-      "color":"#ee4540",
+      "mark": {"type": "circle", "color":"#801336"},
       "encoding": {
         "size": {
           "field": "Number of Tourists",
