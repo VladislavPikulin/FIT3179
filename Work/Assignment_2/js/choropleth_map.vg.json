@@ -28,7 +28,7 @@
         "lookup": "properties.SU_A3",
         "from": {
           "data": {
-            "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Assignment_2/data/modified/tourism_europe.csv"
+            "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Assignment_2/data/modified/tourism_in_europe_by_country.csv"
           },
           "key": "Country Code",
           "fields": ["Average"]
