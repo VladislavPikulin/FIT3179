@@ -16,33 +16,12 @@ body{
 .vertical-center {
 	transform: translateY(30%);
   }
-.centered {
-	box-sizing: border-box;
-    margin: 0 auto;
-    text-align: left;
-    width: 800px;
-}
 #grid50{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: 50% 50%;
 	column-count: 2;
 	column-gap: 0;
-	column-width: 400px;
-}
-#grid7030{
-	box-sizing: border-box;
-	display: grid;
-	grid-template-columns: 70% 30%;
-	column-count: 2;
-	column-gap: 0;
-	column-width: 400px;
-}
-#fullWidth{
-	box-sizing: border-box;
-	display: grid;
-	grid-template-columns: 100%;
-	column-count: 1;
-	column-gap: 40px;
 	column-width: 400px;
 }
