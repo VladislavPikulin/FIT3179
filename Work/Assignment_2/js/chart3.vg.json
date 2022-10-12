@@ -1,7 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 700,
-  "height": 400,
+  "width": 800,
+  "height": 600,
+  "background": "#EEEADD",
   "title": "Average tourist Arrivals in Europe By Country Between the Years 2000 and 2019",
   "description": "A donut chart representing the number of tourists that visit each country on average.",
   "data": 
@@ -27,11 +28,13 @@
       },
   "layer": [
     {
-      "mark": {"type": "arc", "innerRadius": 80, "outerRadius": 240},
-      "encoding": {"tooltip":[{"field": "country", "type": "nominal", "title": "Country Name"} ,{"field": "value", "type": "quantitative", "title": "Avg. Number of Tourists"}]   }
+      "mark": {"type": "arc", "innerRadius": 120, "outerRadius": 350},
+      "encoding": {"tooltip":[{"field": "country", "type": "nominal", "title": "Country Name"} ,{"field": "value", "type": "quantitative", "title": "Avg. Number of Tourists"}],
+                    "color": {"field":"country", "scale":{"scheme": "set1"}}
+                  }
     },
     {
-      "mark": {"type": "text", "radius": 260},
+      "mark": {"type": "text", "radius": 380},
       "encoding": {"text": {"field": "country", "type": "nominal"}}
     }
   ],

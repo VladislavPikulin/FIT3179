@@ -2,6 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 700,
   "height": 500,
+  "background": "#EEEADD",
   "config": {
     "style": {
       "cell": {
@@ -10,7 +11,7 @@
     },
     "axis": {
       "grid": true,
-      "gridColor": "#dedede"
+      "gridColor": "#f2f2f2"
     }
   },
   "title": "Tourism in Europe against GDP and Cost of Living in 2019",
@@ -53,6 +54,7 @@
   "layer": [
     {
       "mark": "circle",
+      "color":"#ee4540",
       "encoding": {
         "size": {
           "field": "Number of Tourists",

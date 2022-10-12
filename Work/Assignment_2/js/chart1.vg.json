@@ -1,7 +1,19 @@
 {
   "title": "Tourist Arrivals in Europe Between the Years 2000 and 2019",
   "width": 700,
-  "height": 500,
+  "height": 350,
+  "background": "#EEEADD",
+  "config": {
+    "style": {
+      "cell": {
+        "stroke": "transparent"
+      }
+    },
+    "axis": {
+      "grid": true,
+      "gridColor": "#ee8980"
+    }
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Assignment_2/data/modified/tourism_europe_total.csv"
   },
