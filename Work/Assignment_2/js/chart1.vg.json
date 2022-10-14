@@ -1,6 +1,6 @@
 {
   "width": 700,
-  "height": 370,
+  "height": 330,
   "background": "#EEEADD",
   "config": {
     "style": {
@@ -26,27 +26,10 @@
         {
           "field": "Tourists",
           "type": "quantitative",
-          "title": "Total Number of Tourists"
+          "title": "Total Number of Tourists",
+          "format": ","
         }
       ]
-    }
-  },
-  {
-    "mark": {
-      "type": "text",
-      "dy": 10,
-      "fontSize": 11.5
-    },
-    "encoding": {
-      "text": {"field": "Country Name", "type": "nominal"},
-      "color": {"value": "white"},
-      "opacity": {
-        "condition": {
-          "test": "datum['Country Name'] == 'France' || datum['Country Name'] == 'Ukraine'",
-          "value": 1
-        },
-        "value": 0
-      }
     }
   }]
 }

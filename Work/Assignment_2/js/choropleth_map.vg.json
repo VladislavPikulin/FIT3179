@@ -50,7 +50,8 @@
         {
           "field": "Average",
           "type": "quantitative",
-          "title": "Average Tourist Arrivals"
+          "title": "Average Tourist Arrivals",
+          "format": ","
         }
       ]
     }

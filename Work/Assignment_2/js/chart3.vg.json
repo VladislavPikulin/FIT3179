@@ -30,7 +30,7 @@
       "mark": {"type": "arc", "innerRadius": 120, "outerRadius": 350},
       "encoding": {"tooltip":[
                                 {"field": "country", "type": "nominal", "title": "Country Name"} ,
-                                {"field": "value", "type": "quantitative", "title": "Avg. Number of Tourists"}, 
+                                {"field": "value", "type": "quantitative", "title": "Avg. Number of Tourists", "format": ","}, 
                                 {"field": "percent", "type": "quantitative", "title": "% of Total: "}
                               ],
                     "color": {"field":"country", "scale":{"scheme": "tableau20"}}
