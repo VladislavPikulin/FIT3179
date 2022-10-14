@@ -68,11 +68,11 @@
         "tooltip": [
           {"field": "Country", "type": "nominal"},
           {"field": "Number of Tourists", "type": "quantitative", "format": ","},
-          {"field": "GDP per capita", "type": "quantitative", "format": ","},
+          {"field": "GDP per capita", "type": "quantitative", "format": ",.2f"},
           {
             "field": "Cost of Living Index",
             "type": "quantitative",
-            "format": ","
+            "format": ",.2f"
           }
         ]
       }
