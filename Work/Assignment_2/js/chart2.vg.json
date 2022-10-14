@@ -107,7 +107,7 @@
           "innerRadius": {"value": 40},
           "outerRadius": {"scale": "r", "field": "value"},
           "stroke": {"value": "#fff"},
-          "tooltip": {"value":{"field": "values.value", "type": "quantitative","title":"Number of Tourists", "format": ","}}
+          "tooltip": {"field": "value", "type": "quantitative","title":"Number of Tourists", "format": ","}
         },
         "update": {"fill": {"value": "#801336"}},
         "hover": {"fill": {"value": "pink"}}

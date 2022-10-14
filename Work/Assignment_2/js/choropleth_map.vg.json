@@ -51,7 +51,7 @@
           "field": "Average",
           "type": "quantitative",
           "title": "Average Tourist Arrivals",
-          "format": ","
+          "format": ",.2f"
         }
       ]
     }
