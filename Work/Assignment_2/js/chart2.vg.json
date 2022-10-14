@@ -104,10 +104,10 @@
           "y": {"field": {"group": "height"}, "mult": 0.5},
           "startAngle": {"field": "startAngle"},
           "endAngle": {"field": "endAngle"},
-          "innerRadius": {"value": 30},
+          "innerRadius": {"value": 40},
           "outerRadius": {"scale": "r", "field": "value"},
           "stroke": {"value": "#fff"},
-          "tooltip": {"field": "value", "type": "quantitative","title":"Number of Tourists", "format": ","}
+          "tooltip": {"value":{"field": "values.value", "type": "quantitative","title":"Number of Tourists", "format": ","}}
         },
         "update": {"fill": {"value": "#801336"}},
         "hover": {"fill": {"value": "pink"}}
@@ -120,12 +120,15 @@
         "enter": {
           "x": {"field": {"group": "width"}, "mult": 0.5},
           "y": {"field": {"group": "height"}, "mult": 0.5},
-          "radius": {"scale": "r", "field": "value", "offset": 13},
+          "radius": {"scale": "r", "field": "value", "offset": 18},
           "theta": {"signal": "(datum.startAngle + datum.endAngle)/2"},
           "fill": {"value": "#000"},
           "align": {"value": "center"},
           "baseline": {"value": "middle"},
-          "text": {"field": "category"}
+          "text": {"field": "category"},
+          "fontSize": {"value": 15},
+          "fontStyle":{"value": "bold"},
+          "color":{"value": "#3B444B"}
         }
       }
     }

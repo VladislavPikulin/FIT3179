@@ -37,13 +37,13 @@
                   }
     },
     {
-      "mark": {"type": "text", "radius": 400, "fontSize": 20},
+      "mark": {"type": "text", "radius": 385, "fontSize": 15, "fontStyle":"bold", "color":"#3B444B"},
       "encoding": {"text": {"field": "country", "type": "nominal"}}
     }
   ],
   "encoding": {
     "theta": {"field": "value", "type": "quantitative", "stack": true},
-    "color": {"field": "country", "type": "nominal", "legend": null}
+    "color": {"legend": null}
   },
   "view": {"stroke": null}
 }
