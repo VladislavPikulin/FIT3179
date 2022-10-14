@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 700,
+  "width": 650,
   "height": 400,
   "background": "#EEEADD",
   "config": {
@@ -95,6 +95,27 @@
             "value": 1
           },
           "value": 0
+        }
+      }
+    },
+    {
+      "mark":{
+        "type":"line",
+        "color":"#3B444B"
+      },
+      "transform":[{
+        "regression": "GDP per capita",
+        "on": "Cost of Living Index",
+        "extent": [2, 140]
+      }],
+      "encoding": {
+        "y":{
+          "field":"GDP per capita",
+          "type":"quantitative"
+        },
+        "x":{
+          "field":"Cost of Living Index",
+          "type":"quantitative"
         }
       }
     }

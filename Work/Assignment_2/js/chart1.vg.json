@@ -1,6 +1,6 @@
 {
   "width": 700,
-  "height": 330,
+  "height": 370,
   "background": "#EEEADD",
   "config": {
     "style": {
@@ -16,17 +16,37 @@
   "data": {
     "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Assignment_2/data/modified/tourism_europe_total.csv"
   },
-  "mark": {"type": "line", "strokeWidth": 3.5, "color":"#801336"},
-  "encoding": {
-    "x": {"field": "Year", "type": "temporal"},
-    "y": {"field": "Tourists", "type": "quantitative"},
-    "tooltip": [
-      {"field": "Year", "type": "temporal", "title": "Year"},
-      {
-        "field": "Tourists",
-        "type": "quantitative",
-        "title": "Total Number of Tourists"
+  "layer":[{
+    "mark": {"type": "line", "strokeWidth": 3.5, "color":"#801336"},
+    "encoding": {
+      "x": {"field": "Year", "type": "temporal"},
+      "y": {"field": "Tourists", "type": "quantitative"},
+      "tooltip": [
+        {"field": "Year", "type": "temporal", "title": "Year"},
+        {
+          "field": "Tourists",
+          "type": "quantitative",
+          "title": "Total Number of Tourists"
+        }
+      ]
+    }
+  },
+  {
+    "mark": {
+      "type": "text",
+      "dy": 10,
+      "fontSize": 11.5
+    },
+    "encoding": {
+      "text": {"field": "Country Name", "type": "nominal"},
+      "color": {"value": "white"},
+      "opacity": {
+        "condition": {
+          "test": "datum['Country Name'] == 'France' || datum['Country Name'] == 'Ukraine'",
+          "value": 1
+        },
+        "value": 0
       }
-    ]
-  }
+    }
+  }]
 }

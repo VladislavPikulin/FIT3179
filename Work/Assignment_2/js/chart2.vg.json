@@ -90,7 +90,7 @@
       "type": "sqrt",
       "domain": {"data": "table", "field": "value"},
       "zero": true,
-      "range": [30, 180]
+      "range": [60, 220]
     }
   ],
   "marks": [

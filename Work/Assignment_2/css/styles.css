@@ -6,6 +6,7 @@ html {
 	box-sizing: border-box;;
 }
 body{
+	border-color: black;
 	box-sizing: border-box;
 	background-color: #EEEADD;
 	padding: 0;

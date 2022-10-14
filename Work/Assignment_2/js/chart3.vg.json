@@ -33,11 +33,11 @@
                                 {"field": "value", "type": "quantitative", "title": "Avg. Number of Tourists"}, 
                                 {"field": "percent", "type": "quantitative", "title": "% of Total: "}
                               ],
-                    "color": {"field":"country", "scale":{"scheme": "set1"}}
+                    "color": {"field":"country", "scale":{"scheme": "tableau20"}}
                   }
     },
     {
-      "mark": {"type": "text", "radius": 380},
+      "mark": {"type": "text", "radius": 400, "fontSize": 20},
       "encoding": {"text": {"field": "country", "type": "nominal"}}
     }
   ],

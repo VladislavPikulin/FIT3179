@@ -10,17 +10,17 @@
   },
 
 
-    "layer":[
-        {
-    "transform": [
-        {
-            "calculate": "'Data is not available in ' + datum.properties.NAME",
-            "as": "note"
-        }
-    ],
-    "mark": {"type": "geoshape", "fill": "lightgray"},
-    "encoding": {"tooltip": {"field": "note"}}
-        },
+  "layer":[
+    {
+      "transform": [
+          {
+              "calculate": "'Data is not available in ' + datum.properties.NAME",
+              "as": "note"
+          }
+      ],
+      "mark": {"type": "geoshape", "fill": "lightgray"},
+      "encoding": {"tooltip": {"field": "note"}}
+    },
     {
     "transform": [
       {  
@@ -31,7 +31,7 @@
             "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Assignment_2/data/modified/tourism_in_europe_by_country.csv"
           },
           "key": "Country Code",
-          "fields": ["Average"]
+          "fields": ["Country Name","Average"]
         }
       },
       {"calculate": "datum['Average']", "as": "Tourist Arrivals"},
@@ -43,10 +43,10 @@
       "color": {
         "field": "Tourist Arrivals",
         "type": "quantitative",
-        "scale": {"type": "log", "scheme": "blues"}
+        "scale": {"type": "log", "scheme": "yellowgreenblue"}
       },
       "tooltip": [
-        {"field": "properties.NAME", "type": "nominal", "title": "Country Name"},
+        {"field": "Country Name", "type": "nominal", "title": "Country Name"},
         {
           "field": "Average",
           "type": "quantitative",
