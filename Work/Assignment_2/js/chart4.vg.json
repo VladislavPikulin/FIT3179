@@ -52,8 +52,21 @@
   },
   "layer": [
     {
-      "mark": {"type": "circle", "color":"#801336"},
+      "mark": {"type": "circle"},
       "encoding": {
+        "color": {
+          "condition": [
+              {"test": "datum['Country'] == 'France'", "value": "#2fa1da"},
+              {"test": "datum['Country'] == 'Germany'", "value": "#694e52"},
+              {"test": "datum['Country'] == 'Portugal'", "value": "#121214"},
+              {"test": "datum['Country'] == 'Norway'", "value": "#29d95d"},
+              {"test": "datum['Country'] == 'Switzerland'", "value": "#fbb845"},
+              {"test": "datum['Country'] == 'Ireland'", "value": "#4D3211"},
+              {"test": "datum['Country'] == 'Luxembourg'", "value": "#EC7849"},
+              {"test": "datum['Country'] == 'Ukraine'", "value": "#096344"}
+          ],
+          "value": "#801336"
+        },
         "size": {
           "field": "Number of Tourists",
           "type": "quantitative",
