@@ -49,6 +49,25 @@
       {"filter": {"param": "brush"}}
     ],
     "mark": {"type": "area", "color": "goldenrod"}
-  }]
+  },
+
+
+  {
+    "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": 500,
+        "dy": -350,
+        "baseline": "middle",
+        "fontSize": 10,
+        "fontStyle": "italic"
+    },
+    "encoding": {
+        "text": {"field": "Annotation", "type": "nominal"},
+        "color":{"value":"black"}
+        
+    }
+  }
+    ]
 }
 
