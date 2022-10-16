@@ -20,7 +20,8 @@
   "encoding": {
       "x": {"timeUnit": "yearmonth", 
             "field": "Year", 
-            "axis": {"format": "%Y"}
+            "axis": {"format": "%Y"},
+            "title":"Year"
             },
       "y": {"aggregate": "sum", "field": "Tourists"},
       "color": {
@@ -29,7 +30,7 @@
       },
       "tooltip": [
         {"field": "Country", "type": "nominal"},
-        {"field": "Year", "type": "temporal"},
+        {"field": "Year", "type": "temporal","format": "%Y"},
         {"field": "Tourists", "type": "quantitative", "format": ","}
       ]
     },
