@@ -56,9 +56,9 @@
   {
     "mark": {
         "type": "text",
-        "align": "right",
-        "dx": 500,
-        "dy": -350,
+        "align": "center",
+        "dx": 200,
+        "dy": -320,
         "baseline": "middle",
         "fontSize": 10,
         "fontStyle": "italic"
