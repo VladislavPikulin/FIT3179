@@ -88,7 +88,7 @@
   }],
   "encoding": {
     "theta": {"field": "value", "type": "quantitative", "stack": true},
-    "radius": {"field": "value", "scale": {"type": "sqrt", "zero": true, "rangeMin": 60, "rangeMax": 250}},
+    "radius": {"field": "value", "scale": {"type": "sqrt", "zero": true, "rangeMin": 60, "rangeMax": 220}},
     "color": {"value": "#801336"},
     "tooltip": [{"field": "category", "type": "nominal","title":"Month"},{"field": "value", "type": "quantitative","title":"Number of Tourists", "format": ","}]
   }
