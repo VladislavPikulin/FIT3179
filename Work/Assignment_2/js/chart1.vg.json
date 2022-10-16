@@ -1,4 +1,5 @@
 {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 700,
   "height": 330,
   "background": "#EEEADD",
@@ -14,22 +15,18 @@
     }
   },
   "data": {
-    "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Assignment_2/data/modified/tourism_europe_total.csv"
+    "url": "https://raw.githubusercontent.com/VladislavPikulin/FIT3179/main/Work/Assignment_2/data/modified/tourism_europe_total_per_country.csv"
   },
+
   "layer":[{
-    "mark": {"type": "line", "strokeWidth": 3.5, "color":"#801336"},
+
+    "mark": "area",
     "encoding": {
-      "x": {"field": "Year", "type": "temporal"},
-      "y": {"field": "Tourists", "type": "quantitative"},
-      "tooltip": [
-        {"field": "Year", "type": "temporal", "title": "Year"},
-        {
-          "field": "Tourists",
-          "type": "quantitative",
-          "title": "Total Number of Tourists",
-          "format": ","
-        }
-      ]
+      "x": {"timeUnit": "yearmonth", "field": "Year", "axis": {"format": "%Y"}},
+      "y": {"aggregate": "sum", "field": "Tourists"},
+      "color": {"field": "Country", "scale": {"scheme": "category20b"}}
     }
+
   }]
 }
+
