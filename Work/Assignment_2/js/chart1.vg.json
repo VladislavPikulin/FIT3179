@@ -42,7 +42,7 @@
           "select": {"type": "interval", "encodings": ["x","y"]}
         }],
 
-    "mark": {"type":"area","point": true},
+    "mark": {"type":"area","point": true}
 
   },{
     "transform": [
