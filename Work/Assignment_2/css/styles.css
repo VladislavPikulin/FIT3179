@@ -18,7 +18,7 @@ body{
 	transform: translateY(30%);
   }
 #grid50{
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-family: Tahoma, sans-serif;
 	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: 50% 50%;
